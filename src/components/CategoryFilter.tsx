@@ -8,10 +8,11 @@ interface CategoryFilterProps {
 
 const categories = [
   { id: 'all', name: 'Semua Produk', icon: Grid3X3, gradient: 'from-gray-600 to-gray-700' },
-  { id: 'premium', name: 'Premium Apps', icon: Smartphone, gradient: 'from-blue-500 to-purple-600' },
-  { id: 'game', name: 'Gaming', icon: Gamepad2, gradient: 'from-green-500 to-emerald-600' },
+  { id: 'entertainment', name: 'Entertainment', icon: Smartphone, gradient: 'from-blue-500 to-purple-600' },
+  { id: 'design', name: 'Design & Video', icon: Palette, gradient: 'from-pink-500 to-rose-600' },
   { id: 'productivity', name: 'Produktivitas', icon: Briefcase, gradient: 'from-orange-500 to-red-600' },
-  { id: 'design', name: 'Design & Creative', icon: Palette, gradient: 'from-pink-500 to-rose-600' },
+  { id: 'vpn', name: 'VPN & Security', icon: Gamepad2, gradient: 'from-green-500 to-emerald-600' },
+  { id: 'education', name: 'Education', icon: Briefcase, gradient: 'from-purple-500 to-indigo-600' },
 ];
 
 const CategoryFilter: React.FC<CategoryFilterProps> = ({ selectedCategory, onCategoryChange }) => {
