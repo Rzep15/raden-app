@@ -1,5 +1,6 @@
 import React from 'react';
 import { ShoppingCart, Instagram, MessageCircle, Crown } from 'lucide-react';
+import { APP_CONFIG, SOCIAL_LINKS } from '../config/constants';
 
 interface HeaderProps {
   cartCount: number;
@@ -14,7 +15,7 @@ const Header: React.FC<HeaderProps> = ({ cartCount, onCartClick }) => {
           <div className="flex items-center space-x-4">
             <div className="relative">
               <img 
-                src="/public/Logo.png" 
+                src={APP_CONFIG.logo} 
                 alt="Raden Store" 
                 className="w-14 h-14 rounded-2xl object-cover shadow-xl ring-4 ring-gradient-to-r from-blue-400 to-purple-400"
               />
@@ -34,17 +35,17 @@ const Header: React.FC<HeaderProps> = ({ cartCount, onCartClick }) => {
           
           <div className="flex items-center space-x-3">
             <a 
-              href="https://instagram.com/raden.stor3" 
+              href={SOCIAL_LINKS.instagram.url} 
               target="_blank" 
               rel="noopener noreferrer"
               className="hidden sm:flex items-center space-x-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white px-4 py-2 rounded-xl hover:from-pink-600 hover:to-rose-600 transition-all duration-300 shadow-lg hover:shadow-pink-500/25 transform hover:scale-105"
             >
               <Instagram size={18} />
-              <span className="font-semibold">@raden.stor3</span>
+              <span className="font-semibold">{SOCIAL_LINKS.instagram.username}</span>
             </a>
             
             <a 
-              href="https://wa.me/6282233331156" 
+              href={SOCIAL_LINKS.whatsapp.url} 
               target="_blank" 
               rel="noopener noreferrer"
               className="hidden sm:flex items-center space-x-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300 shadow-lg hover:shadow-green-500/25 transform hover:scale-105"

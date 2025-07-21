@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowLeft, User, Phone, Send, ShoppingBag } from 'lucide-react';
 import { Product } from '../data/products';
+import { APP_CONFIG } from '../config/constants';
 
 interface CartItem extends Product {
   quantity: number;
@@ -58,7 +59,7 @@ const OrderForm: React.FC<OrderFormProps> = ({ items, total, onBack, onClose, on
     }
 
     const whatsappMessage = generateWhatsAppMessage();
-    const whatsappUrl = `https://wa.me/6282233331156?text=${whatsappMessage}`;
+    const whatsappUrl = `https://wa.me/${APP_CONFIG.whatsappNumber}?text=${whatsappMessage}`;
     
     window.open(whatsappUrl, '_blank');
     onSuccess();

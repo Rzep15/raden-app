@@ -6,6 +6,7 @@ import CategoryFilter from './components/CategoryFilter';
 import ProductCard from './components/ProductCard';
 import Cart from './components/Cart';
 import { products, Product } from './data/products';
+import { APP_CONFIG, SOCIAL_LINKS } from './config/constants';
 import { Instagram, MessageCircle, Crown, Star } from 'lucide-react';
 
 interface CartItem extends Product {
@@ -116,7 +117,7 @@ function App() {
           <div className="flex items-center justify-center space-x-4 mb-8">
             <div className="relative">
               <img 
-                src="/public/Logo.png" 
+                src={APP_CONFIG.logo} 
                 alt="Raden Store" 
                 className="w-16 h-16 rounded-2xl object-cover shadow-2xl ring-4 ring-white/20"
               />
@@ -142,22 +143,22 @@ function App() {
           
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
             <a 
-              href="https://instagram.com/raden.stor3" 
+              href={SOCIAL_LINKS.instagram.url} 
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-3 bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 px-8 py-4 rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-pink-500/25 transform hover:scale-105"
             >
               <Instagram size={24} />
-              <span className="font-bold text-lg">@raden.stor3</span>
+              <span className="font-bold text-lg">{SOCIAL_LINKS.instagram.username}</span>
             </a>
             <a 
-              href="https://wa.me/6282233331156" 
+              href={SOCIAL_LINKS.whatsapp.url} 
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-3 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 px-8 py-4 rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-green-500/25 transform hover:scale-105"
             >
               <MessageCircle size={24} />
-              <span className="font-bold text-lg">+62 822-3333-1156</span>
+              <span className="font-bold text-lg">{SOCIAL_LINKS.whatsapp.number}</span>
             </a>
           </div>
           
