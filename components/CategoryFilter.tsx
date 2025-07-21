@@ -1,5 +1,5 @@
 import React from 'react';
-import { Smartphone, Gamepad2, Briefcase, Palette, Grid3X3, Sparkles } from 'lucide-react';
+import { Smartphone, Gamepad2, Briefcase, Palette, Grid3X3, Sparkles, Shield, GraduationCap } from 'lucide-react';
 
 interface CategoryFilterProps {
   selectedCategory: string;
@@ -11,8 +11,8 @@ const categories = [
   { id: 'entertainment', name: 'Entertainment', icon: Smartphone, gradient: 'from-blue-500 to-purple-600' },
   { id: 'design', name: 'Design & Video', icon: Palette, gradient: 'from-pink-500 to-rose-600' },
   { id: 'productivity', name: 'Produktivitas', icon: Briefcase, gradient: 'from-orange-500 to-red-600' },
-  { id: 'vpn', name: 'VPN & Security', icon: Gamepad2, gradient: 'from-green-500 to-emerald-600' },
-  { id: 'education', name: 'Education', icon: Briefcase, gradient: 'from-purple-500 to-indigo-600' },
+  { id: 'vpn', name: 'VPN & Security', icon: Shield, gradient: 'from-green-500 to-emerald-600' },
+  { id: 'education', name: 'Education', icon: GraduationCap, gradient: 'from-purple-500 to-indigo-600' },
 ];
 
 const CategoryFilter: React.FC<CategoryFilterProps> = ({ selectedCategory, onCategoryChange }) => {
@@ -27,7 +27,7 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({ selectedCategory, onCat
         </h2>
       </div>
       
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
         {categories.map((category) => {
           const Icon = category.icon;
           const isSelected = selectedCategory === category.id;
