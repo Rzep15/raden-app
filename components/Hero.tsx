@@ -2,6 +2,13 @@ import React from 'react';
 import { Shield, Zap, Award, Star } from 'lucide-react';
 
 const Hero: React.FC = () => {
+  const scrollToProducts = () => {
+    const element = document.getElementById('products');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white py-24 overflow-hidden">
       {/* Background Pattern */}
@@ -62,7 +69,7 @@ const Hero: React.FC = () => {
           {/* CTA Button */}
           <div className="mt-16">
             <button 
-              onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={scrollToProducts}
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-12 py-4 rounded-2xl text-xl font-bold shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105"
             >
               Lihat Produk Premium

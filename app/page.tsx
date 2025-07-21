@@ -1,19 +1,21 @@
+'use client'
+
 import React, { useState } from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import SearchBar from './components/SearchBar';
-import CategoryFilter from './components/CategoryFilter';
-import ProductCard from './components/ProductCard';
-import Cart from './components/Cart';
-import { products, Product } from './data/products';
-import { APP_CONFIG, SOCIAL_LINKS } from './config/constants';
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import SearchBar from '@/components/SearchBar';
+import CategoryFilter from '@/components/CategoryFilter';
+import ProductCard from '@/components/ProductCard';
+import Cart from '@/components/Cart';
+import { products, Product } from '@/data/products';
+import { APP_CONFIG, SOCIAL_LINKS } from '@/config/constants';
 import { Instagram, MessageCircle, Crown, Star } from 'lucide-react';
 
 interface CartItem extends Product {
   quantity: number;
 }
 
-function App() {
+export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
@@ -181,5 +183,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

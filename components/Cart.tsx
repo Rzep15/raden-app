@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X, Minus, Plus, ShoppingBag } from 'lucide-react';
-import { Product } from '../data/products';
+import { Product } from '@/data/products';
 import OrderForm from './OrderForm';
 
 interface CartItem extends Product {

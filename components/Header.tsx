@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShoppingCart, Instagram, MessageCircle, Crown } from 'lucide-react';
-import { APP_CONFIG, SOCIAL_LINKS } from '../config/constants';
+import { APP_CONFIG, SOCIAL_LINKS } from '@/config/constants';
 
 interface HeaderProps {
   cartCount: number;

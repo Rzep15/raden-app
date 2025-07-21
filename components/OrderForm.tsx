@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowLeft, User, Phone, Send, ShoppingBag } from 'lucide-react';
-import { Product } from '../data/products';
-import { APP_CONFIG } from '../config/constants';
+import { Product } from '@/data/products';
+import { APP_CONFIG } from '@/config/constants';
 
 interface CartItem extends Product {
   quantity: number;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Plus, Clock, Sparkles, Star, Shield } from 'lucide-react';
-import { Product } from '../data/products';
+import { Product } from '@/data/products';
 
 interface ProductCardProps {
   product: Product;

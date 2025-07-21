@@ -199,33 +199,3 @@ export const products: Product[] = [
     duration: '30 Hari'
   }
 ];
-
-// Fungsi untuk menambah produk baru
-export const addProduct = (product: Omit<Product, 'id'>): Product => {
-  const newProduct: Product = {
-    ...product,
-    id: Date.now().toString()
-  };
-  products.push(newProduct);
-  return newProduct;
-};
-
-// Fungsi untuk menghapus produk
-export const removeProduct = (id: string): boolean => {
-  const index = products.findIndex(product => product.id === id);
-  if (index > -1) {
-    products.splice(index, 1);
-    return true;
-  }
-  return false;
-};
-
-// Fungsi untuk update produk
-export const updateProduct = (id: string, updates: Partial<Product>): Product | null => {
-  const index = products.findIndex(product => product.id === id);
-  if (index > -1) {
-    products[index] = { ...products[index], ...updates };
-    return products[index];
-  }
-  return null;
-};
